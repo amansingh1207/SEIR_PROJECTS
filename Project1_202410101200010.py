@@ -1,3 +1,8 @@
+# Write a python program that takes a URL on the command line, fetches the page, and outputs (one per line).
+# 1. Page Title(without any html tags)
+# 2. Page Body (just the text, without any html tags)
+# 3. All the URLs that the page points/link to
+
 import sys
 import time
 from selenium import webdriver
