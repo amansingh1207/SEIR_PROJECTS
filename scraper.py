@@ -14,7 +14,10 @@ def do_scrapping():
     if len(sys.argv) < 2:
         print("Enter the url that you want to extract information!")
         return
-    url = sys.argv[1]
+    input_url = sys.argv[1]
+    url = input_url.strip("'").strip('"')
+    if not url.startswith("http"):
+        url = "https://" + url
     s = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service = s)
     try:
